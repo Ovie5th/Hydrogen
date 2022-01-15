@@ -1,0 +1,121 @@
+.home-wrapper {
+  display: flex;
+  /* padding: 0% 3%; */
+}
+.hydrogen-logo {
+  font-size: 60px;
+}
+.hydrogen-payroll {
+  margin: 0;
+}
+.left-side-home {
+  flex: 5.4;
+  align-self: flex-start;
+  text-align: left;
+  height: 100vh;
+  background-image: url("../../assets/guilherme-stecanella-UrS5HkBr1Rc-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.left-home-text {
+  width: 80%;
+  text-align: center;
+}
+
+.right-side-home {
+  flex: 6.6;
+  height: 97.8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side-list{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+}
+
+.left-side-list li {
+    margin-left: 15px;
+    list-style-type: none;
+    font-size: 10px;
+}
+
+.right-side-wrapper {
+  color: #1d1447;
+  margin-bottom: 60px;
+}
+
+.home-login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-login-input {
+  padding: 0 20px;
+  height: 40px;
+  width: 300px;
+  background-color: #f5f6fa;
+  border: 1px solid #e7e6f2;
+  border-radius: 5px;
+  outline: none;
+  color: #c4c3d2;
+  font-size: 12px;
+  letter-spacing: 0.08rem;
+}
+
+.login-button {
+  background-color: #6554c0;
+  height: 45px;
+  width: 345px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.welcome-back {
+  font-weight: 300;
+}
+
+.login-text {
+  font-weight: 300;
+  width: 80%;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.home-link {
+  font-size: 14px;
+  position: absolute;
+  bottom: 60px;
+}
+
+.forgot-password {
+    font-size: 10px;
+    color: #6554c0;
+    margin-left: 175px;
+}
+
+.remember-me-span {
+    margin-left: 10px;
+    font-weight: 200;
+}

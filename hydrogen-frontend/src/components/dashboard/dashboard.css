@@ -1,0 +1,124 @@
+.Dashboard-wrapper {
+    background-color: #F4F6FC;
+    padding-top: 1px;
+    padding-bottom: 20px;
+}
+
+.dashboard-welcome {
+    background-color: #6554C0;
+    color: #ffffff;
+    height: 150px;
+    border-radius: 4px;
+    width: 75%;
+    margin: 0 auto;
+ 
+}
+.dashboard-welcome h2 {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-weight: 300;
+    font-size: 28px;
+}
+.dashboard-welcome p {
+    padding-left: 20px;
+   font-weight: 200;
+   font-size: 16px;
+}
+.dashboard-amount-section {
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.dashboard-amount-section > h2 {
+font-weight: 400;
+    font-size: 24px;
+}
+.dashboard-data {
+    display: flex;
+}
+
+.dashboard-card {
+       display: flex;
+       justify-content: space-evenly;
+       align-items: center;
+}
+.dashboard-button {
+    border-radius: 10px;
+    border: none;
+    padding: 4px 7px;
+    font-size: 12px;
+}
+.dashboard-credit-card {
+    width: 90%;
+    margin: 0 auto;
+}
+.dashboard-credit-card h5 {
+    color: #787391;
+    font-weight: 400;
+}
+.dashboard-credit-card h5:last-child {
+    font-weight: 200;
+    font-size: 14px;
+}
+.dashboard-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #5949AD;
+    margin-right: 20px;
+     font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-card-wrapper {
+ background-color: #120C3E;
+ color: #ffffff;
+ border-radius: 4px;
+ width: 25%;
+}
+.dash-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+.amount-paid {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    margin-left: 15px;
+    border-radius: 2px;
+}
+
+.dashboard-chart {
+    width: 75%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.dashboard-wrap-text p {
+   margin: 0;
+   color: #787391;
+}
+.dashboard-wrap-text p:first-child {
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+.bottom-cards {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.bottom-cards > div {
+      border-left: 1px solid #F0F4F7;
+}
+
+.account-with-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

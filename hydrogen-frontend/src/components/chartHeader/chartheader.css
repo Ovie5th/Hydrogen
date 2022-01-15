@@ -1,0 +1,22 @@
+.chartHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-bottom: 1px solid #F5F5F7;
+    margin-bottom: 10px;
+}
+.chart-list {
+    display: flex;
+}
+
+.chart-list li {
+    list-style-type:none ;
+    margin-right: 20px;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 4px;
+}
+.chart-monthly {
+    color: #ffffff;
+    background-color: #6554C0;
+}

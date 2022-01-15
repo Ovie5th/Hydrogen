@@ -1,0 +1,26 @@
+.single-card {
+    width: 33%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.card-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #DFD9FE;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   color: #6554C0;
+}
+
+
+.description {
+    color: #ABB6C6;
+    font-size: 14px;
+}
