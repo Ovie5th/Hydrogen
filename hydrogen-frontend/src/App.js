@@ -1,21 +1,30 @@
 import './App.css';
-import {Routes, Route, Navigate} from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Loginpage from './pages/loginPage/LoginPage';
 import Homepage from './pages/homepage/Homepage';
-
+import LandingPage from './pages/landingpage/LandingPage';
+import {useEffect, useState} from 'react'
 
 function App() {
-  const token = localStorage.getItem('Htoken')
- console.log(token, 'testing')
+  const [token, setToken] = useState('')
+  useEffect(()=>{
+    const access_token = localStorage.getItem('Htoken');
+    setToken(access_token)
+  },[])
+  
 
   return (
-    <div className="App">
-      <Routes>
-       
-        <Route path = "/home" element = {token ? <Homepage/> : <Navigate to = "/login"/> } /> 
-        <Route path="/login" element={<Loginpage />} />
-      </Routes>
-    </div>
+    <Switch>
+      <Route path="/" exact >
+        <LandingPage />
+      </Route>
+      <Route path="/dashboard" exact>
+        {(token !== "" )? <Homepage /> : <Redirect to="/login" />}
+      </Route>
+      <Route path="/login" exact>
+        <Loginpage />
+      </Route>
+    </Switch>
   );
 }
 

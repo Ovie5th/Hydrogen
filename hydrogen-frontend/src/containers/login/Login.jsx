@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 import qs from 'qs'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 import "./Login.css";
 
@@ -10,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
-    const History = useNavigate();
+    const History = useHistory();
     
     
 
@@ -40,7 +40,9 @@ const Login = () => {
           })
           .then(async (response) => {
             window.localStorage.setItem("Htoken", response.data.access_token);
-            History("/home");
+            // console.log(response.data.access_token, "token");
+            // console.log('jk')
+            History.push("/dashboard");
             setLoading(false);
           })
           .catch((error) => {
