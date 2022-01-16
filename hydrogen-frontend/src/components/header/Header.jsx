@@ -9,10 +9,10 @@ const Header = () => {
       <header>
         <div className="header-wrapper">
           <div className="header-logo">
-            <p>
+            <span>
               <FaInstagram />
-            </p>
-            <p>HydrogenPayroll</p>
+            </span>
+            <span>HydrogenPayroll</span>
           </div>
           <ul className="header-right">
             <li>

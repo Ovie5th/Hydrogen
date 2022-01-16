@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa";
+import qs from 'qs'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import "./Login.css";
 
@@ -8,9 +10,9 @@ const Login = () => {
   const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
-    const [token, setToken] = useState('')
-
-    localStorage.setItem('token', token)
+    const History = useNavigate();
+    
+    
 
     const submitHandler = async (e) => {
         e.preventDefault();
@@ -20,25 +22,31 @@ const Login = () => {
         }
         setLoading(true);
         await axios
-            .request({
-                url: "https://api.staging.hydrogenhr.com/api/v1/",
-                data: {
-                    username,
-                    password,
-                },
-                method: "post",
-                withCredentials: true,
-            })
-                .then(async (response) => {
-                    console.log("Success:", response);
-                    const tokenFromServer = response.data.token;
-                    setToken(tokenFromServer)
-                    setLoading(false);
-                })
-                .catch((error) => {
-                    console.log(error.response);
-                    setLoading(false);
-                });
+          .request({
+            method: "post",
+            url: "https://api.staging.hydrogenhr.com/api/v1/oauth/token",
+            data: qs.stringify({
+              username,
+              password,
+              grant_type: "password",
+            }),
+            auth: {
+              username: "hydrogenhr-hris-service",
+              password: "password",
+            },
+            headers: {
+              "content-type": "application/x-www-form-urlencoded;charset=utf-8",
+            },
+          })
+          .then(async (response) => {
+            window.localStorage.setItem("Htoken", response.data.access_token);
+            History("/home");
+            setLoading(false);
+          })
+          .catch((error) => {
+            console.log(error.response);
+            setLoading(false);
+          });
     };
 
   return (
@@ -94,8 +102,9 @@ const Login = () => {
               <input type="checkbox" />
               <span className="remember-me-span">Remember me </span>
             </label>
-            <button className="login-button">login</button>
+            <button className="login-button">{loading ? 'loading...':'login' }</button>
           </form>
+          <p>{error}</p>
           <p className="home-link">
             Dont have an account yet? <a href="/">Join Hydrogen Payroll</a>
           </p>
